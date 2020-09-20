@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title>Form Template</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: gainsboro;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        #boxes {
+            width: 100%;
+            margin: 105px 20px;
+            /*background-color: #55acee;*/
+        }
+
+        #boxes::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 27%;
+            height: 360px;
+            float: left;
+            margin-left: 50px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .socials {
+            border-radius: 6px;
+            text-align: center;
+            background-image: linear-gradient(to left, red, yellow);
+
+        }
+
+        .socials a {
+            width: 30px;
+            height: 40px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .socials a i {
+            color: white;
+        }
+
+        .b-socials {
+            text-align: center;
+            background-image: linear-gradient(to left, deepskyblue, whitesmoke);
+            border-radius: 6px;
+            height: 94px;
+            width: 100%;
+        }
+
+        .b-socials a {
+
+            display: inline-block;
+            margin: 30px 9px;
+        }
+
+        .b-socials a i {
+            color: white;
+        }
+
+        .c-socials {
+            text-align: center;
+        }
+
+        .c-socials a {
+            display: inline-block;
+            margin: 30px 10px;
+            background-color: whitesmoke;
+            border-radius: 4px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16);
+            padding: 5px 22px;
+
+        }
+
+        .c-socials a i {
+
+            color: blue;
+        }
+
+        .wrapper input {
+            margin-left: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .wrapper input[type="email"], .wrapper input[type="password"] {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid darkgrey;
+            height: 62px;
+            font-size: 14px;
+            width: 80%;
+            margin-bottom: 15px;
+        }
+
+        .wrapper input[type="submit"] {
+            outline: none;
+            width: 20%;
+            border: none;
+            height: 28px;
+            background-color: darkslategray;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 11px;
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+        }
+
+        .wrapper p {
+            text-align: right;
+            font-size: 13px;
+            color: darkgrey;
+            margin-right: 30px;
+            margin-bottom: 15px;
+        }
+
+        .wrapper p a {
+            text-decoration: none;
+            color: #26272b;
+            font-weight: bold;
+        }
+
+        .wrapper p a:hover {
+            color: deepskyblue;
+        }
+
+        #sign-up {
+            background-color: deeppink;
+            margin: 5px 35px;
+            width: 42%;
+            height: 35px;
+        }
+
+        #sign-in {
+            background-image: linear-gradient(to left, darkblue, blue, skyblue);
+            width: 90%;
+            height: 35px;
+        }
+
+        /*break point */
+        @media (max-width: 625px) {
+
+            #container {
+                min-width: 320px;
+            }
+
+            #boxes {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            #boxes::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .box {
+                width: 55%;
+                height: 360px;
+                float: left;
+                margin-left: 80px;
+                margin-top: 25px;
+                background-color: white;
+                border-radius: 6px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            .socials {
+                border-radius: 6px;
+                text-align: center;
+                background-image: linear-gradient(to left, red, yellow);
+
+            }
+
+            .socials a {
+                width: 30px;
+                height: 40px;
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .socials a i {
+                color: white;
+            }
+
+            .b-socials {
+                text-align: center;
+                background-image: linear-gradient(to left, deepskyblue, whitesmoke);
+                border-radius: 6px;
+                height: 94px;
+                width: 100%;
+            }
+
+            .b-socials a {
+
+                display: inline-block;
+                margin: 30px 9px;
+            }
+
+            .b-socials a i {
+                color: white;
+            }
+
+            .c-socials {
+                text-align: center;
+            }
+
+            .c-socials a {
+                display: inline-block;
+                margin: 30px 10px;
+                background-color: whitesmoke;
+                border-radius: 4px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16);
+                padding: 5px 22px;
+
+            }
+
+            .c-socials a i {
+
+                color: blue;
+            }
+
+            .wrapper input {
+                margin-left: 20px;
+                margin-bottom: 20px;
+
+            }
+
+            .wrapper input[type="email"], .wrapper input[type="password"] {
+                outline: none;
+                border: none;
+                border-bottom: 1px solid darkgrey;
+                height: 62px;
+                font-size: 14px;
+                width: 80%;
+                margin-bottom: 15px;
+            }
+
+            .wrapper input[type="submit"] {
+                outline: none;
+                width: 20%;
+                border: none;
+                height: 28px;
+                background-color: darkslategray;
+                color: white;
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: uppercase;
+                border-radius: 11px;
+            }
+
+            input[type="submit"]:hover {
+                cursor: pointer;
+            }
+
+            .wrapper p {
+                text-align: right;
+                font-size: 13px;
+                color: darkgrey;
+                margin-right: 30px;
+                margin-bottom: 15px;
+            }
+
+            .wrapper p a {
+                text-decoration: none;
+                color: #26272b;
+                font-weight: bold;
+            }
+
+            .wrapper p a:hover {
+                color: deepskyblue;
+            }
+
+            #sign-up {
+                background-color: deeppink;
+                margin: 5px 35px;
+                width: 42%;
+                height: 35px;
+            }
+
+            #sign-in {
+                background-image: linear-gradient(to left, darkblue, blue, skyblue);
+                width: 90%;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<h1 style="color: black;font-size:50px;text-align: center; margin-top: 20px">FORM TEMPLATES</h1>
+<div id="container">
+    <div id="boxes">
+        <div class="box">
+            <div class="socials">
+                <span style="display: block;padding:20px;color: white;font-weight: bold ">Log in</span>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+            </div>
+            <div class="wrapper">
+                <form action="#">
+                    <input placeholder="Your email" type="email">
+                    <input placeholder="Your password" type="password">
+                    <p>Forget <a href="#">Password?</a></p>
+                    <input type="submit" value="Log in">
+                    <p> Don't have an account? <a href="#">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="box">
+            <h3 style="margin-top: 15px;text-align: center;color: deeppink"> Sign Up</h3>
+            <div class="wrapper">
+                <form action="#">
+                    <input placeholder="Your email" type="email">
+                    <input placeholder="Your password" type="password">
+                    <input id="sign-up" type="submit" value="SIGN UP">
+                    <p> Have an account? <a href="#">Log in</a></p>
+                </form>
+                <div class="b-socials">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <h3 style="margin-top: 15px;text-align: center;color:black"> Sign Up</h3>
+            <div class="wrapper">
+                <form action="#">
+                    <input placeholder="Your email" type="email">
+                    <input placeholder="Your password" type="password">
+                    <p><a href="#" style="color:deepskyblue">Forgot Password?</a></p>
+                    <input id="sign-in" type="submit" value="SIGN IN">
+                </form>
+                <div class="c-socials">
+                    <span style="display: block;text-align: center;color: grey;font-size: 12px">or Sign in with:</span>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html
